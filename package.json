@@ -1,0 +1,24 @@
+{
+  "name": "enzrossi-livecoding",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "delete:node_modules": "find . -name node_modules -type d -prune -exec rm -rf '{}' +"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "7.10.0",
+    "@typescript-eslint/parser": "7.10.0",
+    "eslint": "8",
+    "eslint-config-universe": "12.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "lerna": "8.1.3",
+    "prettier": "3.2.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
