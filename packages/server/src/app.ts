@@ -2,6 +2,7 @@ import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
+import { getCodeSandboxHost } from '@codesandbox/utils';
 
 import todoRoutes from './routes/todo.route';
 
@@ -20,7 +21,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 
 // enable cors
-app.use(cors());
+// app.use(
+//   cors({
+//     origin: getCodeSandboxHost(3000),
+//   }),
+// );
+app.use(
+  cors({
+    origin: /\.csb\.app$/,
+  }),
+);
 app.options('*', cors());
 
 app.get('/', (_req, res) => {

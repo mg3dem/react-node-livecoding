@@ -7,6 +7,7 @@
     "@tanstack/react-query": "5.37.1",
     "antd": "5.17.3",
     "axios": "1.7.2",
+    "os-browserify": "^0.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-scripts": "5.0.1"
